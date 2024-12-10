@@ -13,6 +13,7 @@ public class ParticlePlayOnUse : MonoBehaviour
 
     void Start()
     {
+        particles = gameObject.GetComponentInChildren<ParticleSystem>();
         XRGrabInteractable grabInteractable = GetComponent<XRGrabInteractable>();
         grabInteractable.activated.AddListener(x => StartParticles());
         grabInteractable.deactivated.AddListener(x => StopParticles());
@@ -20,11 +21,17 @@ public class ParticlePlayOnUse : MonoBehaviour
 
     public void StartParticles()
     {
+        if (!particles.isPlaying)
+        {
             particles.Play();
+        }
     }
 
     public void StopParticles()
     {
-        particles.Stop(true, ParticleSystemStopBehavior.StopEmittingAndClear);
+        if (particles.isPlaying)
+        {
+            particles.Stop(true, ParticleSystemStopBehavior.StopEmittingAndClear);
+        }
     }
 }

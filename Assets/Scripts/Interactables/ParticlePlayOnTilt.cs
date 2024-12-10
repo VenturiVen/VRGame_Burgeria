@@ -13,11 +13,6 @@ public class ParticlePlayOnTilt : MonoBehaviour
     public ParticleSystem particles;
     [SerializeField] private float tilt = 90f;
 
-    void Start()
-    {
-        particles = GetComponent<ParticleSystem>();
-    }
-
     void Update()
     {
         if (Vector3.Angle(Vector3.down, transform.forward) <= tilt)

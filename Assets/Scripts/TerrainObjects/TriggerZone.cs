@@ -5,12 +5,12 @@ using UnityEngine.Events;
 
 public class TriggerZone : MonoBehaviour
 {
-    public string targetTag;
+    public List<string> targetTags = new List<string>();
     public UnityEvent<GameObject> enterEvent;
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == targetTag)
+        if (targetTags.Contains(other.gameObject.tag))
         {
             enterEvent.Invoke(other.gameObject);
         }
