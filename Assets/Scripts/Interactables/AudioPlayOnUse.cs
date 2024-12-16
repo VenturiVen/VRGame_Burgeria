@@ -3,17 +3,16 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
 
-public class ParticlePlayOnUse : MonoBehaviour
+public class AudioPlayOnUse : MonoBehaviour
 {
-    // if interactable object with particles as child is grabbed and used,
-    // particles start playing
-    // and stop when interactable is not used
 
-    public ParticleSystem particles;
+    [SerializeField] AudioSource source;
+    [SerializeField] AudioClip clip;
+
+    private bool played = false;
 
     void Start()
     {
-        particles = gameObject.GetComponentInChildren<ParticleSystem>();
         XRGrabInteractable grabInteractable = GetComponent<XRGrabInteractable>();
         grabInteractable.activated.AddListener(x => StartParticles());
         grabInteractable.deactivated.AddListener(x => StopParticles());
@@ -21,18 +20,18 @@ public class ParticlePlayOnUse : MonoBehaviour
 
     public void StartParticles()
     {
-        if (!particles.isPlaying)
+        if (!played)
         {
-                
-            particles.Play();
+            played = true;
+            source.PlayOneShot(clip);
         }
     }
 
     public void StopParticles()
     {
-        if (particles.isPlaying)
+        if (played)
         {
-            particles.Stop(true, ParticleSystemStopBehavior.StopEmittingAndClear);
+            played = false;
         }
     }
 }

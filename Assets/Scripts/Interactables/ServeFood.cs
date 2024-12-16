@@ -6,6 +6,9 @@ public class ServeFood : MonoBehaviour
 {
     // private int numberOfFood = 0;
 
+    [SerializeField] AudioSource source;
+    [SerializeField] AudioClip clip;
+
     public int score;
 
     List<GameObject> food = new List<GameObject>();
@@ -14,6 +17,7 @@ public class ServeFood : MonoBehaviour
     {
         if (food.Count == 3)
         {
+            source.PlayOneShot(clip);
             score++;
         }
 

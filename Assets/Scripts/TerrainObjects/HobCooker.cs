@@ -6,6 +6,9 @@ public class HobCooker : MonoBehaviour
 {
     public Material mat1;
 
+    [SerializeField] AudioSource source;
+    [SerializeField] AudioClip clip;
+
     public float timeToCook = 10;
     private float timer;
 
@@ -21,6 +24,14 @@ public class HobCooker : MonoBehaviour
                 other.GetComponent<MeshRenderer>().material = mat1;
                 timer = 0;
             }
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "Raw")
+        {
+            source.PlayOneShot(clip);
         }
     }
 }
