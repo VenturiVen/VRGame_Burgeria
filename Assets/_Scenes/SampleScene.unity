@@ -1051,9 +1051,9 @@ GameObject:
   - component: {fileID: 198634347}
   - component: {fileID: 198634352}
   - component: {fileID: 198634351}
+  - component: {fileID: 198634354}
   - component: {fileID: 198634350}
   - component: {fileID: 198634355}
-  - component: {fileID: 198634354}
   - component: {fileID: 198634356}
   - component: {fileID: 198634357}
   m_Layer: 0
@@ -1197,7 +1197,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Timeout: 10
-  m_XROrigin: {fileID: 0}
+  m_XROrigin: {fileID: 198634348}
 --- !u!114 &198634354
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1359,9 +1359,9 @@ Light:
   m_CookieSize: 10
   m_Shadows:
     m_Type: 1
-    m_Resolution: 0
+    m_Resolution: 1
     m_CustomResolution: -1
-    m_Strength: 1
+    m_Strength: 0.8
     m_Bias: 0.05
     m_NormalBias: 0.4
     m_NearPlane: 0.2
@@ -7975,11 +7975,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4436924190610506439, guid: 909348c9a407d634387d520a32955ce8, type: 3}
       propertyPath: targetTags.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4436924190610506439, guid: 909348c9a407d634387d520a32955ce8, type: 3}
       propertyPath: targetTags.Array.data[1]
       value: Junk
+      objectReference: {fileID: 0}
+    - target: {fileID: 4436924190610506439, guid: 909348c9a407d634387d520a32955ce8, type: 3}
+      propertyPath: targetTags.Array.data[2]
+      value: Raw
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
