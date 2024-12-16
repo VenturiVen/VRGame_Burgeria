@@ -17,8 +17,6 @@ public class ServeFood : MonoBehaviour
             score++;
         }
 
-        Debug.Log("Start: " + food.Count);
-
         foreach (GameObject go in food)
         {
             Destroy(go);

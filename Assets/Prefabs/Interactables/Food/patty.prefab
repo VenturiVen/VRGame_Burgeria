@@ -18,15 +18,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 9a123a7cc0b1a834dbdd6a1aea50a960, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.7294915
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 9a123a7cc0b1a834dbdd6a1aea50a960, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.9325017
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 9a123a7cc0b1a834dbdd6a1aea50a960, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1.6081853
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 9a123a7cc0b1a834dbdd6a1aea50a960, type: 3}
       propertyPath: m_LocalRotation.w
@@ -59,6 +59,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 9a123a7cc0b1a834dbdd6a1aea50a960, type: 3}
       propertyPath: m_Name
       value: patty
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9a123a7cc0b1a834dbdd6a1aea50a960, type: 3}
+      propertyPath: m_TagString
+      value: FoodObject
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -294,5 +298,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fbb769e92eba2f948a6bfa04114f5ed0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  leftHandModel: {fileID: 0}
-  rightHandModel: {fileID: 0}

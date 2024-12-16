@@ -24,6 +24,6 @@ public class ScoreText : MonoBehaviour
     // Update is called once per frame
     public void ChangeText(int score)
     {
-        textmeshpro_score_text.text = score.ToString("00");
+        textmeshpro_score_text.text = "Burgers: " + score.ToString("00");
     }
 }

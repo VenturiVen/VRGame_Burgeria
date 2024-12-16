@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.XR.CoreUtils;
 using UnityEngine;
 using UnityEngine.XR;
 using UnityEngine.XR.Interaction.Toolkit;
@@ -10,8 +11,8 @@ public class DisableHandModelOnGrab : MonoBehaviour
     // so the object is more visible
     // and the hand isn't holding the object awkwardly
 
-    public GameObject leftHandModel;
-    public GameObject rightHandModel;
+    private GameObject leftHandModel;
+    private GameObject rightHandModel;
 
     // Start is called before the first frame update
     void Start()
@@ -19,6 +20,8 @@ public class DisableHandModelOnGrab : MonoBehaviour
         XRGrabInteractable grabInteractable = GetComponent<XRGrabInteractable>();
         grabInteractable.selectEntered.AddListener(HideHandModel);
         grabInteractable.selectExited.AddListener(ShowHandModel);
+        leftHandModel = FetchHandmodels.Instance.GetLeftHandModel(); 
+        rightHandModel = FetchHandmodels.Instance.GetRightHandModel(); 
     }
 
     public void HideHandModel(SelectEnterEventArgs args)

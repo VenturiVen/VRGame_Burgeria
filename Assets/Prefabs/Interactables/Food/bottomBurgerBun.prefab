@@ -10,15 +10,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: d81a8866691494440b2991675715710f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.3592315
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d81a8866691494440b2991675715710f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.0034018
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d81a8866691494440b2991675715710f, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1.7245443
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d81a8866691494440b2991675715710f, type: 3}
       propertyPath: m_LocalRotation.w
@@ -51,6 +51,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: d81a8866691494440b2991675715710f, type: 3}
       propertyPath: m_Name
       value: bottomBurgerBun
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: d81a8866691494440b2991675715710f, type: 3}
+      propertyPath: m_TagString
+      value: FoodObject
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -286,5 +290,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fbb769e92eba2f948a6bfa04114f5ed0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  leftHandModel: {fileID: 0}
-  rightHandModel: {fileID: 0}

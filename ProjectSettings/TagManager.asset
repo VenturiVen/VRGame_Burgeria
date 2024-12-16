@@ -8,6 +8,10 @@ TagManager:
   - Left Hand
   - Right Hand
   - Interactable
+  - Junk
+  - LeftHandModel
+  - RightHandModel
+  - Raw
   layers:
   - Default
   - TransparentFX
