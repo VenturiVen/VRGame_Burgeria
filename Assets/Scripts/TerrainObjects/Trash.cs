@@ -12,8 +12,6 @@ public class Trash : MonoBehaviour
 
     private void TrashObject(GameObject go)
     {
-        // disabling an object doesn't delete the object from memory
-        // but object stops using up CPU
-        go.SetActive(false); 
+        Destroy(go);
     }
 }
