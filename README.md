@@ -1,4 +1,4 @@
-# CS4071_VRGame
+# VRGame_Burgeria
 Project for module CS4071 - Virtual and Augmented Reality Design.
 
 This game is inspired by simulator-like VR games such as Job Simulator, but also non-VR games such as Papa's Burgeria.
